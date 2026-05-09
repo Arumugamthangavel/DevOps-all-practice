@@ -85,3 +85,10 @@ ERROR:FOR INSTALLING ANSIBLE FROM THIRD PARTY
  ls /etc/apt/sources.list.d/
 
 sudo rm -f /etc/apt/sources.list.d/ansible-ubuntu-ansible-resolute.list
+
+sudo rm -f /etc/apt/sources.list.d/ansible-ubuntu-ansible-resolute.sources
+
+
+[ERROR]: Task failed: Timeout (12s) waiting for privilege escalation prompt:
+fatal: [172.31.5.76]: UNREACHABLE! => {"changed": false, "msg": "Task failed: Timeout (12s) waiting for privilege escalation prompt:", "unreachable": true}
+
