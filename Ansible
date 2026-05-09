@@ -129,5 +129,31 @@ ansible-playbook -i hosts nginx.yaml --ask-become-pass
 (or)
 ansible-playbook -i hosts nginx.yaml 
 ____________
-ansibbstate: started
-        enabled: yes
+
+--------------------------------------
+MULTIPLE WEB APP INSTALL WITH PLAYBOOK
+--------------------------------------
+- name: Install and Start NGINX
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name:installing multiple web app
+      apt:
+         name:
+             -git
+             -nginx
+             -curl
+         state: present
+
+
+
+
+
+
