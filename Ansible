@@ -30,7 +30,7 @@ sudo visudo
 =>inside<=
 ansible ALL=(ALL) NOPASSWD: ALL
 
-sudo vi /etc/hostname
+sudo vi /etc/hostname                                        why? to have node name on top or @node instead of IP
 =>inside<=
 ansible-ct
 
