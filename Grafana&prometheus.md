@@ -11,7 +11,6 @@ sudo dnf update -y
 ```
 
 ---
-
 ## Step 2: Download Prometheus
 
 ```bash
